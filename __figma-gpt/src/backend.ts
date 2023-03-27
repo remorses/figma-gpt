@@ -2,8 +2,6 @@
 /// <reference types="@figma/plugin-typings" />
 
 if (figma.editorType === 'figma') {
-    console.log('figma', typeof fetch)
-
     figma.showUI(__html__, {
         height: 240,
         width: 540,
@@ -14,14 +12,17 @@ if (figma.editorType === 'figma') {
             // console.log(msg.code)
             let code = extractCode(msg.code)
             console.log('code\n', code)
-            eval(code)
+            try {
+                eval(code)
+            } catch (e) {
+                console.error(e)
+            }
             return
         }
 
         // figma.closePlugin()
     }
 } else {
-    // TODO figjam
 }
 
 function extractCode(msg: string): string {

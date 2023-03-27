@@ -24,7 +24,7 @@ export default function App() {
                     setLoading(false)
                 }
             }}
-            className='p-4 w-full flex flex-col gap-4 overflow-hidden'
+            className='p-4 m-0 h-full w-full flex flex-col gap-4 overflow-hidden'
         >
             <div className='space-y-2 w-full'>
                 <label
@@ -97,3 +97,4 @@ async function generateCode(prompt) {
 function makePrompt(prompt: string): string {
     return `create a figma plugin script in javascript that does the following: ${prompt}`
 }
+
