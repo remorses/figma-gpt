@@ -5,8 +5,8 @@ if (figma.editorType === 'figma') {
     console.log('figma', typeof fetch)
 
     figma.showUI(__html__, {
-        height: 400,
-        width: 700,
+        height: 240,
+        width: 500,
     })
 
     figma.ui.onmessage = async (msg) => {
