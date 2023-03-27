@@ -34,5 +34,7 @@ function extractCode(msg: string): string {
     if (msg.includes('```')) {
         msg = msg.split(/```.*/)[1]
     }
+    // all plugins contain this line, remove it
+    msg = msg.replace(`figma.showUI(__html__);`, '')
     return msg
 }

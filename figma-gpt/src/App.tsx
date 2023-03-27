@@ -84,7 +84,7 @@ async function generateCode(prompt) {
             {
                 role: 'system',
                 content:
-                    'Only return valid javascript code, do not describe the code or return markdown',
+                    'Only return valid javascript code, do not describe the code or return markdown. The figma frame is already created',
             },
             { role: 'user', content: realPrompt },
         ],
