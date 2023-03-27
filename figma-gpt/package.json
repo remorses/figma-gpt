@@ -4,8 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "concurrently -k 'vite build --watch' 'vite -c vite.backend.js build --watch'",
-        "build": "vite build",
-        "serve": "vite preview"
+        "build": "vite build && vite -c vite.backend.js build"
     },
     "engines": {
         "node": ">=12"
