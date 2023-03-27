@@ -8,6 +8,8 @@ export default defineConfig({
     plugins: [],
     build: {
         emptyOutDir: false,
+        target: 'es2015',
+        minify: false,
         lib: {
             entry: path.resolve(__dirname, 'src/backend.ts'),
             formats: ['iife'],

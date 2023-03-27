@@ -20,6 +20,7 @@
         "concurrently": "^7.6.0",
         "openai-fetch": "^1.1.0",
         "preact": "10.13.2",
+        "preact-dom": "^1.0.1",
         "vite-plugin-singlefile": "^0.13.3"
     }
 }

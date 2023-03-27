@@ -10,6 +10,7 @@ export default defineConfig({
         viteSingleFile(), //
     ],
     build: {
+        minify: false,
         emptyOutDir: false,
         target: 'esnext',
         assetsInlineLimit: 100000000,

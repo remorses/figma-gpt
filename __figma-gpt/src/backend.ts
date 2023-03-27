@@ -1,20 +1,30 @@
-import {} from 'openai-fetch'
+/// <reference types="vite/client" />
+/// <reference types="@figma/plugin-typings" />
 
 if (figma.editorType === 'figma') {
+    console.log('figma', typeof fetch)
+
     figma.showUI(__html__)
 
-    figma.ui.onmessage = (msg) => {
-        if (msg.type === 'prompt') {
-            const nodes: SceneNode[] = []
-            const prompt = msg.prompt
-
-            eval(`const rect = figma.createRectangle(); nodes.push(rect);`)
-            // figma.currentPage.selection = nodes
-            // figma.viewport.scrollAndZoomIntoView(nodes)
+    figma.ui.onmessage = async (msg) => {
+        if (msg.type === 'code') {
+            // console.log(msg.code)
+            let code = extractCode(msg.code)
+            console.log('code\n', code)
+            eval(code)
+            return
         }
 
-        figma.closePlugin()
+        // figma.closePlugin()
     }
 } else {
     // TODO figjam
+}
+
+function extractCode(msg: string): string {
+    // if return markdown then only return code inside
+    if (msg.includes('```')) {
+        msg = msg.split('```')[1]
+    }
+    return msg
 }
