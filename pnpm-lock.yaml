@@ -5,7 +5,7 @@ importers:
   .:
     specifiers: {}
 
-  __figma-gpt:
+  figma-gpt:
     specifiers:
       '@figma/plugin-typings': ^1.62.0
       '@preact/preset-vite': ^2.5.0
@@ -27,25 +27,6 @@ importers:
       '@preact/preset-vite': 2.5.0_preact@10.13.2+vite@4.2.1
       tailwindcss: 3.2.7
       vite: 4.2.1
-
-  _figma-gpt:
-    specifiers:
-      '@figma/plugin-typings': '*'
-      typescript: '*'
-    devDependencies:
-      '@figma/plugin-typings': 1.62.0
-      typescript: 5.0.2
-
-  figma-gpt:
-    specifiers:
-      '@figma/plugin-typings': ^1.62.0
-      openai-fetch: ^1.1.0
-      typescript: ^5.0.2
-    dependencies:
-      openai-fetch: 1.1.0
-    devDependencies:
-      '@figma/plugin-typings': 1.62.0
-      typescript: 5.0.2
 
 packages:
 
@@ -1320,12 +1301,6 @@ packages:
   /tslib/2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
     dev: false
-
-  /typescript/5.0.2:
-    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
-    engines: {node: '>=12.20'}
-    hasBin: true
-    dev: true
 
   /update-browserslist-db/1.0.10_browserslist@4.21.5:
     resolution: {integrity: sha512-OztqDenkfFkbSG+tRxBeAnCVPckDBcvibKd35yDONx6OU8N7sqgwc7rCbkJ/WcYtVRZ4ba68d6byhC21GFh7sQ==}
