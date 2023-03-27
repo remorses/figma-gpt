@@ -1,4 +1,4 @@
-Demo: https://twitter.com/__morse/status/1640391973726040064?s=61&t=-AtGVKQok2E5up-bR7PNOw
+[Demo](https://twitter.com/__morse/status/1640391973726040064?s=61&t=-AtGVKQok2E5up-bR7PNOw)
 
 To use this plugin:
 
