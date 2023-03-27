@@ -32,7 +32,7 @@ if (figma.editorType === 'figma') {
 function extractCode(msg: string): string {
     // if return markdown then only return code inside
     if (msg.includes('```')) {
-        msg = msg.split('```')[1]
+        msg = msg.split(/```.*/)[1]
     }
     return msg
 }
