@@ -24,7 +24,7 @@ export default function App() {
                     setLoading(false)
                 }
             }}
-            className='p-4 w-full flex flex-col gap-6'
+            className='p-4 w-full flex flex-col gap-4 overflow-hidden'
         >
             <div className='space-y-2 w-full'>
                 <label
