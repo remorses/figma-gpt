@@ -16,7 +16,10 @@ if (figma.editorType === 'figma') {
             try {
                 eval(code)
             } catch (e) {
-                console.error(e)
+                // console.error(e)
+                figma.notify('Could not run generated code: ' + e.message, {
+                    error: true,
+                })
             }
             return
         }

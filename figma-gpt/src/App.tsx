@@ -5,11 +5,20 @@ import { OpenAIClient } from 'openai-fetch'
 
 export default function App() {
     const [prompt, setPrompt] = useState('')
-
+    const [error, setError] = useState('')
     let [loading, setLoading] = useState(false)
+    useEffect(() => {
+        window.onmessage = (event) => {
+            const { type, error } = event.data.pluginMessage
+            if (type === 'error') {
+                setError(error)
+            }
+        }
+    }, [])
     return (
         <form
             onSubmit={async (e) => {
+                setError('')
                 e.preventDefault()
                 setLoading(true)
                 try {
@@ -34,14 +43,17 @@ export default function App() {
                     Prompt
                 </label>
 
-                <textarea
+                <input
                     id='message'
                     rows={2}
                     className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                     onChange={(e) => setPrompt(e.target['value'])}
                     placeholder='draw a rectangle'
-                ></textarea>
+                ></input>
             </div>
+            {error && (
+                <pre className='text-sm font-mono text-red-600'>{error}</pre>
+            )}
             <div className=''>
                 <button
                     type='submit'
