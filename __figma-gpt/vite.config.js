@@ -6,8 +6,8 @@ import { viteSingleFile } from 'vite-plugin-singlefile'
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
+        preact({ prefreshEnabled: false }),
         viteSingleFile(), //
-        // preact({ prefreshEnabled: false }),
     ],
     build: {
         emptyOutDir: false,

@@ -17,6 +17,7 @@
         "vite": "4.2.1"
     },
     "dependencies": {
+        "concurrently": "^7.6.0",
         "openai-fetch": "^1.1.0",
         "preact": "10.13.2",
         "vite-plugin-singlefile": "^0.13.3"
