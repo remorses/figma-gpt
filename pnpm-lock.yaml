@@ -1,0 +1,26 @@
+lockfileVersion: 5.4
+
+importers:
+
+  .:
+    specifiers: {}
+
+  figma-gpt:
+    specifiers:
+      '@figma/plugin-typings': '*'
+      typescript: '*'
+    devDependencies:
+      '@figma/plugin-typings': 1.62.0
+      typescript: 5.0.2
+
+packages:
+
+  /@figma/plugin-typings/1.62.0:
+    resolution: {integrity: sha512-Pv1DZqsuJJbzVsqgCz1fPPxEdQ1o521jbcMw1MDyM9oerw7QltM8TluR5BrGgBi6Zc8zXE6J6ZuUbzz/x7Bh6A==}
+    dev: true
+
+  /typescript/5.0.2:
+    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
+    engines: {node: '>=12.20'}
+    hasBin: true
+    dev: true
