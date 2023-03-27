@@ -4,13 +4,16 @@
   "description": "Your Figma Plugin",
   "main": "code.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "watch": "npm run build -- --watch"
+    "build": "tsc",
+    "watch": "tsc -w"
   },
   "author": "",
   "license": "",
   "devDependencies": {
-    "@figma/plugin-typings": "*",
-    "typescript": "*"
+    "@figma/plugin-typings": "^1.62.0",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "openai-fetch": "^1.1.0"
   }
 }
