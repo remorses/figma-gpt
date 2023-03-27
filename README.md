@@ -8,4 +8,4 @@ To use this plugin:
 
 ## Limitations
 
-ChatGPT not always returns valid code, you may need to try a few times to get the actual code
+ChatGPT not always returns valid code, you may need to retry a few times to get the actual code
