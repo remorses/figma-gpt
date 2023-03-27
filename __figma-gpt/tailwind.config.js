@@ -1,4 +1,5 @@
 module.exports = {
-  mode: "jit",
-  purge: ["./src/**/*.{ts,tsx}"]
-};
+    mode: 'jit',
+    darkMode: 'class', // or 'media' or 'class'
+    purge: ['./src/**/*.{ts,tsx}'],
+}

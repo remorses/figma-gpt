@@ -4,7 +4,10 @@
 if (figma.editorType === 'figma') {
     console.log('figma', typeof fetch)
 
-    figma.showUI(__html__)
+    figma.showUI(__html__, {
+        height: 400,
+        width: 700,
+    })
 
     figma.ui.onmessage = async (msg) => {
         if (msg.type === 'code') {
