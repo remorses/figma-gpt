@@ -1,0 +1,10 @@
+{
+    "name": "figma-gpt",
+    "id": "1222156960139230547",
+    "api": "1.0.0",
+    "main": "dist/main.iife.js",
+    "capabilities": [],
+    "enableProposedApi": false,
+    "editorType": ["figma", "figjam"],
+    "ui": "main.html"
+}

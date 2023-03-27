@@ -1,0 +1,22 @@
+{
+    "name": "vite-preact-tailwindcss",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "vite build --watch",
+        "build": "vite build",
+        "serve": "vite preview"
+    },
+    "engines": {
+        "node": ">=12"
+    },
+    "devDependencies": {
+        "@preact/preset-vite": "^2.1.0",
+        "@figma/plugin-typings": "*",
+        "tailwindcss": "2.2.15",
+        "vite": "2.5.7"
+    },
+    "dependencies": {
+        "preact": "10.5.14"
+    }
+}
