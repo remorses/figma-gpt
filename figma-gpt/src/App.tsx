@@ -41,14 +41,6 @@ export default function App() {
                     onChange={(e) => setPrompt(e.target['value'])}
                     placeholder='draw a rectangle'
                 ></textarea>
-
-                {/* <textarea
-                    className={'border min-h-[200px] w-full'}
-                    // value={prompt}
-                    onChange={(e) => setPrompt(e.target['value'])}
-                    placeholder='draw a rectangle'
-                    type='text'
-                /> */}
             </div>
             <div className=''>
                 <button
@@ -91,10 +83,8 @@ async function generateCode(prompt) {
     let content = res.message.content
     console.log('content\n', content)
     return content
-    // console.log(extractCode(content))
 }
 
 function makePrompt(prompt: string): string {
     return `create a figma plugin script in javascript that does the following: ${prompt}`
 }
-
