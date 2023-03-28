@@ -84,13 +84,15 @@ async function generateCode(prompt) {
             {
                 role: 'system',
                 content:
-                    'Only return valid javascript code, do not describe the code or return markdown. The figma frame is already created',
+                    'You know how to write figma plugins very well (you are the best). Only return valid javascript code. do not describe the code or return markdown. The figma frame is already created',
             },
             { role: 'user', content: realPrompt },
         ],
         // maxTokens: 1000,
         model: 'gpt-3.5-turbo',
-        temperature: 0.4,
+        user: 'figma',
+        
+        temperature: 0.2,
     })
     let content = res.message.content
     console.log('content\n', content)
@@ -98,5 +100,5 @@ async function generateCode(prompt) {
 }
 
 function makePrompt(prompt: string): string {
-    return `create a figma plugin script in javascript that does the following: ${prompt}`
+    return `create a figma plugin script with no window that does the following: ${prompt}`
 }
